@@ -1,0 +1,87 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(105, 110, 136);
+  color: rgb(72, 75, 93);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.accordion ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion ul li {
+  position: relative;
+}
+
+label[for^="accordion-section"] {
+  display: block;
+  padding: 1em;
+  background-color: rgb(254, 102, 123);
+  color: rgb(255, 255, 255);
+  border-bottom: solid 1px rgb(250, 250, 250);
+  cursor: pointer;
+  -webkit-transition: background-color 0.25s;
+  transition: background-color 0.25s
+}
+
+label[for^="accordion-section"]:hover {
+  background-color: rgb(146, 150, 171);
+}
+
+.accordion ul li:first-of-type label {
+  border-radius: 3px 3px 0 0;
+}
+
+.accordion ul li:last-of-type label {
+  border-bottom: none;
+  border-radius: 0 0 3px 3px;
+}
+
+.accordion ul li:last-of-type .accordion-section-content {
+  border-radius: 0 0 3px 3px;
+}
+
+.accordion-section-content {
+  padding: 0 1em;
+  height: 0;
+  background-color: rgb(250, 250, 250);
+  overflow-y: hidden;
+  -webkit-transition: height 1s;
+  transition: height 1s;
+}
+
+.direction-chev {
+  position: absolute;
+  right: 1.5em;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+:checked + label[for$="-1"] > i,
+:checked + label[for$="-2"] > i,
+:checked + label[for$="-3"] > i,
+:checked + label[for$="-4"] > i {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+:checked + label[for$="-1"] + .accordion-section-content,
+:checked + label[for$="-2"] + .accordion-section-content,
+:checked + label[for$="-3"] + .accordion-section-content,
+:checked + label[for$="-4"] + .accordion-section-content {
+  height: 200px;
+}

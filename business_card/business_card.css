@@ -1,0 +1,160 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.card-container {
+  width: 25em;
+  height: 14.875em;
+  position: relative;
+  -webkit-perspective: 500px;
+  perspective: 500px;
+  margin: 5% auto;
+  font-family: 'Lato', sans-serif;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-weight: 100;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.card h1 {
+  font-weight: 300;
+  font-size: 2.25em;
+  margin: 0;
+}
+
+.subheader {
+  font-weight: 100;
+  font-size: 1em;
+  margin: 0;
+}
+
+.card p {
+  font-size: 0.75em;
+}
+
+.card-back p {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  font-weight: 400;
+  margin: 17em 1.1em;
+  padding: 0.1em .75em;
+  border-radius: .3em;
+}
+
+label[for="card-flip"] {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+label[for="card-flip"]:hover + .card {
+  -webkit-transform: rotateX(15deg);
+  transform: rotateX(15deg);
+}
+
+#card-flip:checked ~ .card-container label[for="card-flip"]:hover + .card {
+  -webkit-transform: rotateX(165deg);
+  transform: rotateX(165deg);
+}
+
+.card > div[class^="card-"] {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: .25em;
+}
+
+.card-front {
+  width: 100%;
+  height: 100%;
+  padding: 1em 1.3em;
+  background-color: #bada55;
+  background: url(img/bg1.png) center / cover no-repeat;
+}
+
+.card-front > .fa-reply,
+.card-back > .fa-reply {
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  right: 0.75em;
+  top: 0.8em;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.card-front p a {
+  text-decoration: none;
+  color: orange;
+  font-weight: 300;
+  margin-right: 2em;
+}
+
+.encyclopedia-link {
+  display: inline-block;
+  width: 50%;
+  margin-top: 2.9em;
+}
+
+.encyclopedia-link > span {
+  font-weight: 300;
+}
+
+.encyclopedia-link img {
+  float: left;
+  width: 18%;
+  margin-right: 0.75em;
+}
+
+.site-links {
+  list-style-type: none;
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 1.1em;
+  right: 1em;
+  width: auto;
+}
+
+.site-links li {
+  display: inline-block;
+}
+
+.site-links li a img {
+  width: 80%;
+}
+
+.card-back {
+  width: 100%;
+  height: 100%;
+  background-color: #dababb;
+  background: url(img/sbc2-2.jpg) center / cover no-repeat;
+  text-align: right;
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+#card-flip:checked ~ .card-container label[for="card-flip"] + .card {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}

@@ -1,0 +1,64 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(105, 110, 136);
+  color: rgb(72, 75, 93);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.tab-component {
+  position: relative;
+  margin: 5% auto;
+  max-width: 50vw;
+}
+
+.tab-label {
+  display: inline-block;
+  padding: 0.9em;
+  cursor: pointer;
+  -webkit-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+  border-bottom: none;
+  color: rgb(250, 250, 250);
+  background-color: rgb(146, 150, 171);
+  border-radius: 3px 3px 0 0;
+}
+
+.tab-label:hover {
+  background-color: rgb(254, 102, 123);
+}
+
+.tab-content {
+  display: none;
+  position: absolute;
+  top: 3.5em;
+  width: 90%;
+  padding: 0 1em;
+  background-color: rgb(250, 250, 250);
+  border-radius: 0 3px 3px 3px;
+}
+
+:checked + .tab-label[for="home-decor"],
+:checked + .tab-label[for="furniture"],
+:checked + .tab-label[for="kitchen"],
+:checked + .tab-label[for="clearance"] {
+  color: rgb(50, 50, 50);
+  background-color: rgb(250, 250, 250);
+  border-top: solid 0.2em rgb(254, 102, 123);
+}
+
+#home-decor:checked ~ .tab-label[for="home-decor"] + .tab-content,
+#furniture:checked ~ .tab-label[for="furniture"] + .tab-content,
+#kitchen:checked ~ .tab-label[for="kitchen"] + .tab-content,
+#clearance:checked ~ .tab-label[for="clearance"] + .tab-content {
+  display: block;
+  opacity: 1;
+}
