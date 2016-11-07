@@ -906,7 +906,8 @@ label[for^="project-"]:hover {
 }
 
 .skills-graphs__graph-label {
-  flex: 1 0 100%;
+  -ms-flex: 1 0 100%;
+      flex: 1 0 100%;
   text-align: center;
   margin-bottom: 1em;
 }
@@ -914,7 +915,8 @@ label[for^="project-"]:hover {
 .skills-graph {
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 25em;
   /*border: solid 1px red; */
   -ms-flex-pack: distribute;
@@ -1066,9 +1068,12 @@ label[for^="project-"]:hover {
 footer {
   background-color: #b0c4c6;
   min-height: 10vh;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   font-family: "Montserrat";
 }
 
