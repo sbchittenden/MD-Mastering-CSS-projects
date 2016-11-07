@@ -1,4 +1,4 @@
-# Mastering CSS Project Files
+# Mastering CSS - Project Files
 
 End of chapter projects for Learn.ModernDeveloper Mastering CSS 
 
