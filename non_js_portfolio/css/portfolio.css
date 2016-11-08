@@ -1248,6 +1248,7 @@ footer > span {
         content: "";
         height: 0;
         top: 7.7em;
+        left: 0;
         position: fixed;
         width: 0;
     }
