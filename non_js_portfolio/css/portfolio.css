@@ -459,6 +459,7 @@ input[id^="nav__search-modal"] {
     transition: opacity 0.5s 0.125s;
     background-color: #334445;
     background-blend-mode: screen;
+    z-index: 3;
 }
 
 
@@ -485,6 +486,7 @@ input[id^="nav__search-modal"] {
     transition: opacity 0.5s 0.25s;
     background-color: #334445;
     background-blend-mode: screen;
+    z-index: 3;
 }
 
 
