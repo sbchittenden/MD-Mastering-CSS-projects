@@ -31,11 +31,13 @@ p {
 header {
   margin: 5% auto 0 auto;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 a {
@@ -58,13 +60,18 @@ a.underline:after {
   position: absolute;
   bottom: -0.15em;
   left: 0;
-  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 a.underline:hover:after {
   /*width: 100%;*/
-  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
   height: 0.15rem;
   position: absolute;
   bottom: -0.15em;
@@ -84,11 +91,15 @@ nav {
 
 .nav_list {
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   text-align: center;
   /*   border: solid 1px blue; */
 }
@@ -146,6 +157,7 @@ nav ul {
   border-bottom: solid 2px #E9EDEE;
   color: #334445;
   font-family: "Montserrat", sans-serif;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -161,6 +173,7 @@ label[for="nav__search-input"] {
   top: 0;
   left: 0.3em;
   cursor: text;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -176,6 +189,7 @@ input[id^="nav__search-modal"] {
 .nav__search-modal__container {
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
@@ -189,6 +203,7 @@ input[id^="nav__search-modal"] {
   height: 100vh;
   background-color: rgba(51, 68, 69, 0.5);
   z-index: 1000;
+  -webkit-transition: opacity 1s, visibility 1s;
   transition: opacity 1s, visibility 1s;
 }
 
@@ -199,8 +214,10 @@ input[id^="nav__search-modal"] {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 3;
+  -webkit-transition: top 500ms;
   transition: top 500ms;
   border-radius: 0.3em;
   width: 50%;
@@ -216,6 +233,7 @@ input[id^="nav__search-modal"] {
   /*left: 50%;*/
   /*  transform: translate(-50%, -50%);*/
   z-index: 3;
+  -webkit-transition: top 500ms;
   transition: top 500ms;
   /*border-radius: 3px;*/
   /*width: 50%;*/
@@ -226,6 +244,7 @@ input[id^="nav__search-modal"] {
   border: solid 2px #f4f7f7;
   padding: 0.5em;
   border-radius: 50%;
+  -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
 
@@ -244,11 +263,14 @@ input[id^="nav__search-modal"] {
   min-height: 98vh;
   position: relative;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -257,9 +279,11 @@ input[id^="nav__search-modal"] {
   min-height: 90vh;
   position: relative;
   -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 .section:nth-of-type(1):after {
@@ -411,6 +435,7 @@ input[id^="nav__search-modal"] {
   width: 10em;
   height: 10em;
   opacity: 0;
+  -webkit-transition: opacity 0.5s 0.125s;
   transition: opacity 0.5s 0.125s;
   background-color: #334445;
   background-blend-mode: screen;
@@ -436,6 +461,7 @@ input[id^="nav__search-modal"] {
   width: 8em;
   height: 8em;
   opacity: 0;
+  -webkit-transition: opacity 0.5s 0.25s;
   transition: opacity 0.5s 0.25s;
   background-color: #334445;
   background-blend-mode: screen;
@@ -488,9 +514,11 @@ input[id^="project"] {
 .project-tabs__container {
   margin: 1em 0 10% 0;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -501,6 +529,7 @@ label[for^="project-"] {
   cursor: pointer;
   margin-left: 0.7em;
   background-color: #bacdcd;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -511,12 +540,14 @@ label[for^="project-"]:hover {
 
 .project-tabs__tabs {
   -ms-flex: 1;
-  flex: 1;
+  -webkit-box-flex: 1;
+          flex: 1;
 }
 
 .project-tabs__display-area {
   -ms-flex: 4;
-  flex: 4;
+  -webkit-box-flex: 4;
+          flex: 4;
   position: relative;
 }
 
@@ -552,6 +583,7 @@ label[for^="project-"]:hover {
   color: #334445;
   font-family: "Montserrat";
   font-size: 0.8em;
+  -webkit-transition: all 0.35s;
   transition: all 0.35s;
 }
 
@@ -604,9 +636,12 @@ label[for^="project-"]:hover {
   height: 25em;
   position: relative;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
 }
 
 .project-carousel__container input[type="radio"] {
@@ -617,9 +652,12 @@ label[for^="project-"]:hover {
   position: relative;
   width: 100%;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   min-height: 100%;
@@ -631,7 +669,8 @@ label[for^="project-"]:hover {
   text-align: center;
   width: 100%;
   -ms-flex-order: 2;
-  order: 2;
+  -webkit-box-ordinal-group: 3;
+          order: 2;
 }
 
 .project-carousel__bullet-nav label {
@@ -641,6 +680,7 @@ label[for^="project-"]:hover {
   margin-right: 1em;
   border-radius: 50%;
   background-color: #dce6e6;
+  -webkit-transition: all 0.75s;
   transition: all 0.75s;
 }
 
@@ -653,11 +693,14 @@ label[for^="project-"]:hover {
   position: absolute;
   top: 0;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 100%;
@@ -668,6 +711,7 @@ label[for^="project-"]:hover {
 .project-carousel__slide img {
   width: 90%;
   opacity: 0;
+  -webkit-transition: all 0.75s;
   transition: all 0.75s;
 }
 
@@ -780,6 +824,7 @@ label[for^="project-"]:hover {
 
 .circle-graph__container {
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -862,33 +907,40 @@ label[for^="project-"]:hover {
   top: 50%;
   left: 50%;
   z-index: 3;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-family: "Montserrat";
   font-size: 1.25em;
 }
 
 .percent-15 {
-  transform: rotate(calc(0.15*360deg));
+  -webkit-transform: rotate(calc(0.15*360deg));
+          transform: rotate(calc(0.15*360deg));
 }
 
 .percent-25 {
-  transform: rotate(calc(0.25*360deg));
+  -webkit-transform: rotate(calc(0.25*360deg));
+          transform: rotate(calc(0.25*360deg));
 }
 
 .percent-45 {
-  transform: rotate(calc(0.45*360deg));
+  -webkit-transform: rotate(calc(0.45*360deg));
+          transform: rotate(calc(0.45*360deg));
 }
 
 .percent-65 {
-  transform: rotate(calc(0.65*360deg));
+  -webkit-transform: rotate(calc(0.65*360deg));
+          transform: rotate(calc(0.65*360deg));
 }
 
 .percent-72 {
-  transform: rotate(calc(0.72*360deg));
+  -webkit-transform: rotate(calc(0.72*360deg));
+          transform: rotate(calc(0.72*360deg));
 }
 
 .percent-85 {
-  transform: rotate(calc(0.85*360deg));
+  -webkit-transform: rotate(calc(0.85*360deg));
+          transform: rotate(calc(0.85*360deg));
 }
 
 
@@ -898,6 +950,7 @@ label[for^="project-"]:hover {
 
 .skill-graphs__container {
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -ms-flex-pack: distribute;
   justify-content: space-around;
@@ -907,13 +960,15 @@ label[for^="project-"]:hover {
 
 .skills-graphs__graph-label {
   -ms-flex: 1 0 100%;
-      flex: 1 0 100%;
+      -webkit-box-flex: 1;
+          flex: 1 0 100%;
   text-align: center;
   margin-bottom: 1em;
 }
 
 .skills-graph {
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -931,11 +986,15 @@ label[for^="project-"]:hover {
   margin: 0 1em 0 0.8em;
   padding: 0;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   /*   border: solid 1px blue; */
   /*   width: 100%; */
   text-align: right;
@@ -950,9 +1009,11 @@ label[for^="project-"]:hover {
   margin: 0;
   padding: 0;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -ms-flex-align: end;
-  align-items: flex-end;
+  -webkit-box-align: end;
+          align-items: flex-end;
   -ms-flex-pack: distribute;
   justify-content: space-around;
   position: relative;
@@ -960,7 +1021,8 @@ label[for^="project-"]:hover {
   /*   border: solid 1px #334445; */
   height: 10em;
   -ms-flex: 2;
-  flex: 2;
+  -webkit-box-flex: 2;
+          flex: 2;
 }
 
 .x-axis li {
@@ -1021,10 +1083,12 @@ label[for^="project-"]:hover {
 
 .title {
   position: absolute;
-  transform-origin: top left;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
   bottom: -1.5em;
   left: 1.3em;
-  transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
 }
 
 .skills-graphs__tool-tip {
@@ -1040,6 +1104,7 @@ label[for^="project-"]:hover {
   border-radius: 0.2em;
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
   z-index: 15;
 }
@@ -1048,7 +1113,8 @@ label[for^="project-"]:hover {
   content: "";
   width: 1em;
   height: 1em;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   background-color: black;
   position: absolute;
   bottom: -0.4em;
@@ -1069,11 +1135,14 @@ footer {
   background-color: #b0c4c6;
   min-height: 10vh;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -ms-flex-pack: center;
-      justify-content: center;
+      -webkit-box-pack: center;
+          justify-content: center;
   -ms-flex-align: center;
-      align-items: center;
+      -webkit-box-align: center;
+          align-items: center;
   font-family: "Montserrat";
 }
 
@@ -1089,9 +1158,12 @@ footer > span {
 @media screen and (min-width: 43em) {
   .nav_list {
     -ms-flex-direction: row;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
     /*     border: solid 1px red; */
   }
   nav {
@@ -1123,6 +1195,7 @@ footer > span {
   .nav_list li:not(:last-of-type):before {
     content: "[";
     padding-right: 0.2em;
+    -webkit-transition: 250ms;
     transition: 250ms;
     font-weight: bold;
     opacity: 0.75;
@@ -1130,6 +1203,7 @@ footer > span {
   .nav_list li:not(:last-of-type):after {
     content: "]";
     padding-left: 0.2em;
+    -webkit-transition: 250ms;
     transition: 250ms;
     font-weight: bold;
     opacity: 0.75;
