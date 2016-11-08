@@ -301,7 +301,8 @@ input[id^="nav__search-modal"] {
     align-items: center;
 }
 
-.section:nth-of-type(1):after {
+/*.section:nth-of-type(1):after*/
+.greeting:after {
     content: "V";
     width: 2.5em;
     height: 2.5em;
