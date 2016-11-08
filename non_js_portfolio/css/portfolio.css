@@ -32,11 +32,14 @@ header {
   margin: 5% auto 0 auto;
   display: -ms-flexbox;
   display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
   -ms-flex-pack: center;
   -webkit-box-pack: center;
+          -webkit-justify-content: center;
           justify-content: center;
 }
 
@@ -61,7 +64,8 @@ a.underline:after {
   bottom: -0.15em;
   left: 0;
   -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+          -ms-transform: scaleX(0);
+      transform: scaleX(0);
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
@@ -71,7 +75,8 @@ a.underline:after {
 a.underline:hover:after {
   /*width: 100%;*/
   -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+          -ms-transform: scaleX(1);
+      transform: scaleX(1);
   height: 0.15rem;
   position: absolute;
   bottom: -0.15em;
@@ -92,13 +97,16 @@ nav {
 .nav_list {
   display: -ms-flexbox;
   display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-pack: center;
   -webkit-box-pack: center;
+          -webkit-justify-content: center;
           justify-content: center;
   -ms-flex-direction: column;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
           flex-direction: column;
   text-align: center;
   /*   border: solid 1px blue; */
@@ -215,7 +223,8 @@ input[id^="nav__search-modal"] {
   top: 0;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
   z-index: 3;
   -webkit-transition: top 500ms;
   transition: top 500ms;
@@ -264,15 +273,19 @@ input[id^="nav__search-modal"] {
   position: relative;
   display: -ms-flexbox;
   display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-pack: center;
   -webkit-box-pack: center;
+          -webkit-justify-content: center;
           justify-content: center;
   -ms-flex-align: center;
   -webkit-box-align: center;
+          -webkit-align-items: center;
           align-items: center;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 .section:nth-of-type(1) {
@@ -280,9 +293,11 @@ input[id^="nav__search-modal"] {
   position: relative;
   -ms-flex-pack: center;
   -webkit-box-pack: center;
+          -webkit-justify-content: center;
           justify-content: center;
   -ms-flex-align: center;
   -webkit-box-align: center;
+          -webkit-align-items: center;
           align-items: center;
 }
 
@@ -515,12 +530,15 @@ input[id^="project"] {
   margin: 1em 0 10% 0;
   display: -ms-flexbox;
   display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-pack: start;
   -webkit-box-pack: start;
+          -webkit-justify-content: flex-start;
           justify-content: flex-start;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 label[for^="project-"] {
@@ -541,12 +559,14 @@ label[for^="project-"]:hover {
 .project-tabs__tabs {
   -ms-flex: 1;
   -webkit-box-flex: 1;
+          -webkit-flex: 1;
           flex: 1;
 }
 
 .project-tabs__display-area {
   -ms-flex: 4;
   -webkit-box-flex: 4;
+          -webkit-flex: 4;
           flex: 4;
   position: relative;
 }
@@ -637,10 +657,12 @@ label[for^="project-"]:hover {
   position: relative;
   display: -ms-flexbox;
   display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-direction: column;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
           flex-direction: column;
 }
 
@@ -653,13 +675,16 @@ label[for^="project-"]:hover {
   width: 100%;
   display: -ms-flexbox;
   display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-direction: column;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
           flex-direction: column;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
   min-height: 100%;
   /*border: solid 2px green;*/
 }
@@ -670,6 +695,7 @@ label[for^="project-"]:hover {
   width: 100%;
   -ms-flex-order: 2;
   -webkit-box-ordinal-group: 3;
+          -webkit-order: 2;
           order: 2;
 }
 
@@ -694,15 +720,19 @@ label[for^="project-"]:hover {
   top: 0;
   display: -ms-flexbox;
   display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-pack: justify;
   -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
           justify-content: space-between;
   -ms-flex-align: center;
   -webkit-box-align: center;
+          -webkit-align-items: center;
           align-items: center;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
   width: 100%;
   margin: 0;
   visibility: hidden;
@@ -825,11 +855,14 @@ label[for^="project-"]:hover {
 .circle-graph__container {
   display: -ms-flexbox;
   display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
   -ms-flex-pack: space-around;
-  justify-content: space-around;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
 }
 
 .circle-graph {
@@ -908,39 +941,46 @@ label[for^="project-"]:hover {
   left: 50%;
   z-index: 3;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
   font-family: "Montserrat";
   font-size: 1.25em;
 }
 
 .percent-15 {
   -webkit-transform: rotate(calc(0.15*360deg));
-          transform: rotate(calc(0.15*360deg));
+          -ms-transform: rotate(calc(0.15*360deg));
+      transform: rotate(calc(0.15*360deg));
 }
 
 .percent-25 {
   -webkit-transform: rotate(calc(0.25*360deg));
-          transform: rotate(calc(0.25*360deg));
+          -ms-transform: rotate(calc(0.25*360deg));
+      transform: rotate(calc(0.25*360deg));
 }
 
 .percent-45 {
   -webkit-transform: rotate(calc(0.45*360deg));
-          transform: rotate(calc(0.45*360deg));
+          -ms-transform: rotate(calc(0.45*360deg));
+      transform: rotate(calc(0.45*360deg));
 }
 
 .percent-65 {
   -webkit-transform: rotate(calc(0.65*360deg));
-          transform: rotate(calc(0.65*360deg));
+          -ms-transform: rotate(calc(0.65*360deg));
+      transform: rotate(calc(0.65*360deg));
 }
 
 .percent-72 {
   -webkit-transform: rotate(calc(0.72*360deg));
-          transform: rotate(calc(0.72*360deg));
+          -ms-transform: rotate(calc(0.72*360deg));
+      transform: rotate(calc(0.72*360deg));
 }
 
 .percent-85 {
   -webkit-transform: rotate(calc(0.85*360deg));
-          transform: rotate(calc(0.85*360deg));
+          -ms-transform: rotate(calc(0.85*360deg));
+      transform: rotate(calc(0.85*360deg));
 }
 
 
@@ -951,16 +991,20 @@ label[for^="project-"]:hover {
 .skill-graphs__container {
   display: -ms-flexbox;
   display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 .skills-graphs__graph-label {
   -ms-flex: 1 0 100%;
       -webkit-box-flex: 1;
+          -webkit-flex: 1 0 100%;
           flex: 1 0 100%;
   text-align: center;
   margin-bottom: 1em;
@@ -969,13 +1013,16 @@ label[for^="project-"]:hover {
 .skills-graph {
   display: -ms-flexbox;
   display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
   width: 25em;
   /*border: solid 1px red; */
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
   border-bottom: solid 1px #334445;
   font-size: 0.9em;
   margin-bottom: 10em;
@@ -987,13 +1034,16 @@ label[for^="project-"]:hover {
   padding: 0;
   display: -ms-flexbox;
   display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-direction: column;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
           flex-direction: column;
   -ms-flex-pack: justify;
   -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
           justify-content: space-between;
   /*   border: solid 1px blue; */
   /*   width: 100%; */
@@ -1010,18 +1060,22 @@ label[for^="project-"]:hover {
   padding: 0;
   display: -ms-flexbox;
   display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-align: end;
   -webkit-box-align: end;
+          -webkit-align-items: flex-end;
           align-items: flex-end;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
   position: relative;
   /*   width: 100%; */
   /*   border: solid 1px #334445; */
   height: 10em;
   -ms-flex: 2;
   -webkit-box-flex: 2;
+          -webkit-flex: 2;
           flex: 2;
 }
 
@@ -1084,11 +1138,13 @@ label[for^="project-"]:hover {
 .title {
   position: absolute;
   -webkit-transform-origin: top left;
-          transform-origin: top left;
+          -ms-transform-origin: top left;
+      transform-origin: top left;
   bottom: -1.5em;
   left: 1.3em;
   -webkit-transform: rotate(50deg);
-          transform: rotate(50deg);
+          -ms-transform: rotate(50deg);
+      transform: rotate(50deg);
 }
 
 .skills-graphs__tool-tip {
@@ -1114,7 +1170,8 @@ label[for^="project-"]:hover {
   width: 1em;
   height: 1em;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
   background-color: black;
   position: absolute;
   bottom: -0.4em;
@@ -1136,12 +1193,15 @@ footer {
   min-height: 10vh;
   display: -ms-flexbox;
   display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-pack: center;
       -webkit-box-pack: center;
+          -webkit-justify-content: center;
           justify-content: center;
   -ms-flex-align: center;
       -webkit-box-align: center;
+          -webkit-align-items: center;
           align-items: center;
   font-family: "Montserrat";
 }
@@ -1160,9 +1220,11 @@ footer > span {
     -ms-flex-direction: row;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
+            -webkit-flex-direction: row;
             flex-direction: row;
     -ms-flex-pack: justify;
     -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
             justify-content: space-between;
     /*     border: solid 1px red; */
   }
