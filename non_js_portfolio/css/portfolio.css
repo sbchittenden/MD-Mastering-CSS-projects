@@ -962,7 +962,7 @@ label[for^="project-"]:hover {
 }
 
 .percent-15 {
-    -webkit-transform: rotate(calc(0.15*360deg));
+    -webkit-transform: rotate(54deg));
     -ms-transform: rotate(calc(0.15*360deg));
     transform: rotate(calc(0.15*360deg));
 }
@@ -992,7 +992,7 @@ label[for^="project-"]:hover {
 }
 
 .percent-85 {
-    -webkit-transform: rotate(calc(0.85*360deg));
+    -webkit-transform: rotate(306deg);
     -ms-transform: rotate(calc(0.85*360deg));
     transform: rotate(calc(0.85*360deg));
 }
