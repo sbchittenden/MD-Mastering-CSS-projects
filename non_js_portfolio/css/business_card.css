@@ -28,6 +28,7 @@ input[type="checkbox"] {
   transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
+  -webkit-backface-visibility: hidden;
 }
 
 .card h1 {
@@ -110,6 +111,7 @@ label[for="card-flip"]:hover + .card {
   right: 0.75em;
   top: 0.8em;
   color: rgba(255, 255, 255, 0.75);
+  -webkit-backface-visibility: hidden;
 }
 
 .card-front p a {
@@ -124,6 +126,7 @@ label[for="card-flip"]:hover + .card {
     position: absolute;
     bottom: 1.1em;
     font-family: "Lato";
+    -webkit-backface-visibility: hidden;
 }
 
 .encyclopedia-link a {
@@ -150,6 +153,7 @@ label[for="card-flip"]:hover + .card {
   bottom: 1.1em;
   right: 1em;
   width: auto;
+  -webkit-backface-visibility: hidden;
 }
 
 .site-links li {
