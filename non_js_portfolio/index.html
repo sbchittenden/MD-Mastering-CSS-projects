@@ -35,7 +35,7 @@
     <div class="nav__search-modal__modal">
       <h1>Search temporarily disabled.</h1>
       <label for="nav__search-modal__toggle" class="nav__search-modal__toggle-close"><i class="fa fa-times fa-lg" aria-hidden="true"></i>
-</label>
+      </label>
     </div>
   </div>
   <!-- end search modal -->
@@ -256,7 +256,7 @@
             </div>
             <!-- project description and links -->
             <h3>Technologies: HTML5, CSS3, and Vanilla JavaScript</h3>
-            <p>A few examples of webforms.  The structure is HTML and CSS with JavaScript for some basic validation.</p>
+            <p>A few examples of webforms. The structure is HTML and CSS with JavaScript for some basic validation.</p>
             <p><a href="https://sbchittenden.github.io/MD-Intro-to-CSS-website/forms.html" class="demo-link" target="_blank">View Demo</a><a href="https://github.com/sbchittenden/MD-web-forms" class="source-link" target="_blank">View source on GitHub</a></p>
           </div>
           <!-- project container -->
@@ -415,18 +415,30 @@
       <!-- circle graphs -->
       <div class="circle-graph__container">
         <!-- 85% frontend -->
-        <div class="circle-graph">
+        <!-- <div class="circle-graph">
           <div class="circle-background"></div>
           <div class="circle-full"></div>
           <div class="circle-full-right"></div>
           <div class="circle-cover percent-85"></div>
           <span class="circle-graph__label">85% Frontend</span>
+        </div> -->
+        <div class="circle-graph">
+          <div class="circle-graph__background"></div>
+          <div class="circle-graph__q1"></div>
+          <div class="circle-graph__q2"></div>
+          <div class="circle-graph__q3"></div>
+          <div class="circle-graph__85"></div>
+          <div class="circle-graph__knockout"></div>
+          <span class="circle-graph__label">85% Frontend</span>
         </div>
         <!-- 15% backend -->
         <div class="circle-graph">
-          <div class="circle-background"></div>
-          <div class="circle-half"></div>
-          <div class="circle-cover percent-15"></div>
+          <div class="circle-graph__background circle-graph__opposite"></div>
+          <div class="circle-graph__15 circle-graph__unfill"></div>
+          <div class="circle-graph__q2 circle-graph__unfill"></div>
+          <div class="circle-graph__q3 circle-graph__unfill"></div>
+          <div class="circle-graph__q4 circle-graph__unfill"></div>
+          <div class="circle-graph__knockout"></div>
           <span class="circle-graph__label">15% Backend</span>
         </div>
       </div>
