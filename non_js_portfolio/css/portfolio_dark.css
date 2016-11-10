@@ -402,7 +402,7 @@ input[id^="nav__search-modal"] {
   float: left;
   background: no-repeat center/contain url(../img/sbc_bw.png);
   background-color: #FFFFFF;
-  background-blend-mode: screen;
+  background-blend-mode: multiply;
 }
 
 .bubble1 {
@@ -415,7 +415,7 @@ input[id^="nav__search-modal"] {
   opacity: 0;
   transition: opacity 0.5s 0.125s;
   background-color: #FFFFFF;
-  background-blend-mode: screen;
+  background-blend-mode: multiply;
   z-index: 3;
 }
 
@@ -429,7 +429,7 @@ input[id^="nav__search-modal"] {
   opacity: 0;
   transition: opacity 0.5s 0.25s;
   background-color: #FFFFFF;
-  background-blend-mode: screen;
+  background-blend-mode: multiply;
   z-index: 3;
 }
 
