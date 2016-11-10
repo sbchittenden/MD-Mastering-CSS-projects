@@ -1097,6 +1097,11 @@ footer > span {
     position: fixed;
     width: 0;
   }
+
+  nav > h1 {
+    color: #EF4D75;
+  }
+
   .nav_list li {
     padding: 0;
   }
