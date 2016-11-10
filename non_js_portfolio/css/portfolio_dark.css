@@ -147,6 +147,10 @@ nav ul {
   transition: all 0.5s;
 }
 
+.search:focus {
+  border-bottom: solid 2px #EF4D75;
+}
+
 .search:focus + label,
 .search:valid + label {
   top: -1.2em;
