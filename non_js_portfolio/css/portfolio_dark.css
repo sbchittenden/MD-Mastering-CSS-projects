@@ -10,7 +10,7 @@ html {
 
 body {
   background-color: #373B44;
-  color: #FFFFFF;
+  color: rgb(235,235,235);
 }
 
 h1,
@@ -1011,8 +1011,8 @@ label[for^="project-"]:hover {
   top: -4.25em;
   left: -100%;
   width: 10em;
-  background-color: #FFFFFF;
-  color: #373B44;
+  background-color: #373B44;
+  color: #FFFFFF;
   font-size: 0.8em;
   text-align: center;
   padding: 0.8em 0;
@@ -1028,7 +1028,7 @@ label[for^="project-"]:hover {
   width: 1em;
   height: 1em;
   transform: rotate(45deg);
-  background-color: #FFFFFF;
+  background-color: #373B44;
   position: absolute;
   bottom: -0.4em;
   left: 40%;
@@ -1057,7 +1057,7 @@ footer {
 }
 
 footer > span {
-  color: #40444F;
+  color: #373B44;
 }
 
 
