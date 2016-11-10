@@ -448,6 +448,7 @@ input[id^="nav__search-modal"] {
   font-size: 1.5em;
   font-weight: 700;
   line-height: 1;
+  color: #EF4D75;
 }
 
 .article-list {
