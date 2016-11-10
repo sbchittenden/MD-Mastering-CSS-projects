@@ -166,6 +166,10 @@ label[for="nav__search-submit"] {
   float: right;
 }
 
+label[for="nav__search-modal__toggle"]:hover {
+  cursor: pointer;
+}
+
 input[id^="nav__search-modal"] {
   display: none;
 }
