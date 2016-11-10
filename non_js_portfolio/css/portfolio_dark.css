@@ -46,7 +46,7 @@ a.underline {
   display: inline-block;
   text-decoration: none;
   font-family: "Montserrat";
-  color: #FFFFFF;
+  color: #EF4D75;
   position: relative;
 }
 
@@ -346,6 +346,7 @@ input[id^="nav__search-modal"] {
 
 .greeting {
   font-size: 4em;
+  color: #EF4D75;
 }
 
 .greeting:after {
