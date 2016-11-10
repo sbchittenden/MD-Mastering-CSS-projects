@@ -131,6 +131,7 @@ label[for="card-flip"]:hover + .card {
 
 .encyclopedia-link a {
   color: #EF4D75;
+  font-weight: 300;
 }
 
 .encyclopedia-link > span {
