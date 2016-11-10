@@ -188,7 +188,7 @@ input[id^="nav__search-modal"] {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(239, 77, 117, 0.75);
+  background-color: rgba(55, 59, 68, 0.75);
   z-index: 1000;
   transition: opacity 1s, visibility 1s;
 }
@@ -196,7 +196,7 @@ input[id^="nav__search-modal"] {
 .nav__search-modal__modal {
   color: #FFFFFF;
   background-color: #373B44;
-  border: solid 2px #373B44;
+  border: solid 2px #FFFFFF;
   position: absolute;
   top: 0;
   left: 50%;
