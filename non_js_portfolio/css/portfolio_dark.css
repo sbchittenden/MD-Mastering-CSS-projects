@@ -121,13 +121,14 @@ nav ul {
   color: #EF4D75;
   content: "{";
   padding-right: 0.2em;
+  opacity: 1;
 }
 
 .nav_list li:not(:last-of-type):hover:after {
   color: #EF4D75;
   content: "}";
   padding-left: 0.2em;
-  ;
+  opacity: 1;
 }
 
 .nav_list li a {
