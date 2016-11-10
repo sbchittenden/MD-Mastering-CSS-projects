@@ -31,11 +31,16 @@ p {
 header {
   margin: 5% auto 0 auto;
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
   -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
 }
 
 a {
@@ -58,12 +63,19 @@ a.underline:after {
   position: absolute;
   bottom: -0.15em;
   left: 0;
-  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 a.underline:hover:after {
-  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
   height: 0.15rem;
   position: absolute;
   bottom: -0.15em;
@@ -81,11 +93,18 @@ nav {
 
 .nav_list {
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
   -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   /*   border: solid 1px blue; */
 }
@@ -144,6 +163,7 @@ nav ul {
   border-bottom: solid 2px #40444F;
   color: #FFFFFF;
   font-family: "Montserrat", sans-serif;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -163,6 +183,7 @@ label[for="nav__search-input"] {
   top: 0;
   left: 0.3em;
   cursor: text;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -182,6 +203,7 @@ input[id^="nav__search-modal"] {
 .nav__search-modal__container {
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
@@ -195,6 +217,7 @@ input[id^="nav__search-modal"] {
   height: 100vh;
   background-color: rgba(55, 59, 68, 0.75);
   z-index: 1000;
+  -webkit-transition: opacity 1s, visibility 1s;
   transition: opacity 1s, visibility 1s;
 }
 
@@ -205,8 +228,11 @@ input[id^="nav__search-modal"] {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 3;
+  -webkit-transition: top 500ms;
   transition: top 500ms;
   border-radius: 0.3em;
   width: 50%;
@@ -217,6 +243,7 @@ input[id^="nav__search-modal"] {
 #nav__search-modal__toggle:checked + .nav__search-modal__container > .nav__search-modal__modal {
   top: 50%;
   z-index: 3;
+  -webkit-transition: top 500ms;
   transition: top 500ms;
 }
 
@@ -225,6 +252,7 @@ input[id^="nav__search-modal"] {
   border: solid 2px #FFFFFF;
   padding: 0.5em;
   border-radius: 50%;
+  -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
 
@@ -243,22 +271,33 @@ input[id^="nav__search-modal"] {
   min-height: 98vh;
   position: relative;
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
   -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 .section:nth-of-type(1) {
   min-height: 90vh;
   position: relative;
   -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
   -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
 }
 
 .section:nth-of-type(2) {
@@ -362,7 +401,9 @@ input[id^="nav__search-modal"] {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: 2;
 }
 
@@ -419,6 +460,7 @@ input[id^="nav__search-modal"] {
   width: 10em;
   height: 10em;
   opacity: 0;
+  -webkit-transition: opacity 0.5s 0.125s;
   transition: opacity 0.5s 0.125s;
   background-color: #FFFFFF;
   background-blend-mode: multiply;
@@ -433,6 +475,7 @@ input[id^="nav__search-modal"] {
   width: 8em;
   height: 8em;
   opacity: 0;
+  -webkit-transition: opacity 0.5s 0.25s;
   transition: opacity 0.5s 0.25s;
   background-color: #FFFFFF;
   background-blend-mode: multiply;
@@ -474,11 +517,16 @@ input[id^="project"] {
 .project-tabs__container {
   margin: 1em 0 10% 0;
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 label[for^="project-"] {
@@ -487,6 +535,7 @@ label[for^="project-"] {
   cursor: pointer;
   margin-left: 0.7em;
   background-color: #636B7B;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -497,12 +546,16 @@ label[for^="project-"]:hover {
 
 .project-tabs__tabs {
   -ms-flex: 1;
-  flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
 }
 
 .project-tabs__display-area {
   -ms-flex: 4;
-  flex: 4;
+  -webkit-box-flex: 4;
+  -webkit-flex: 4;
+          flex: 4;
   position: relative;
 }
 
@@ -538,6 +591,7 @@ label[for^="project-"]:hover {
   color: #FFFFFF;
   font-family: "Montserrat";
   font-size: 0.8em;
+  -webkit-transition: all 0.35s;
   transition: all 0.35s;
 }
 
@@ -589,9 +643,14 @@ label[for^="project-"]:hover {
   height: 25em;
   position: relative;
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
 }
 
 .project-carousel__container input[type="radio"] {
@@ -602,11 +661,17 @@ label[for^="project-"]:hover {
   position: relative;
   width: 100%;
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
   min-height: 100%;
 }
 
@@ -614,7 +679,9 @@ label[for^="project-"]:hover {
   text-align: center;
   width: 100%;
   -ms-flex-order: 2;
-  order: 2;
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+          order: 2;
 }
 
 .project-carousel__bullet-nav label {
@@ -624,6 +691,7 @@ label[for^="project-"]:hover {
   margin-right: 1em;
   border-radius: 50%;
   background-color: #4A4E5A;
+  -webkit-transition: all 0.75s;
   transition: all 0.75s;
 }
 
@@ -636,13 +704,20 @@ label[for^="project-"]:hover {
   position: absolute;
   top: 0;
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
   -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
   width: 100%;
   margin: 0;
   visibility: hidden;
@@ -651,6 +726,7 @@ label[for^="project-"]:hover {
 .project-carousel__slide img {
   width: 90%;
   opacity: 0;
+  -webkit-transition: all 0.75s;
   transition: all 0.75s;
 }
 
@@ -763,11 +839,15 @@ label[for^="project-"]:hover {
 
 .circle-graph__container {
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
   -ms-flex-pack: space-around;
-  justify-content: space-around;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
 }
 
 .circle-graph {
@@ -841,8 +921,12 @@ label[for^="project-"]:hover {
   top: 0;
   left: 0;
   border-top-left-radius: 100%;
-  transform-origin: bottom right;
-  transform: rotate(-59deg);
+  -webkit-transform-origin: bottom right;
+      -ms-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transform: rotate(-59deg);
+      -ms-transform: rotate(-59deg);
+          transform: rotate(-59deg);
 }
 
 .circle-graph__15 {
@@ -852,8 +936,12 @@ label[for^="project-"]:hover {
   top: 0;
   left: 6em;
   border-top-right-radius: 100%;
-  transform-origin: bottom left;
-  transform: rotate(59deg);
+  -webkit-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: rotate(59deg);
+      -ms-transform: rotate(59deg);
+          transform: rotate(59deg);
 }
 
 .circle-graph__unfill {
@@ -877,7 +965,9 @@ label[for^="project-"]:hover {
   top: 50%;
   left: 50%;
   z-index: 3;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-family: "Montserrat";
   font-size: 1.25em;
 }
@@ -889,29 +979,39 @@ label[for^="project-"]:hover {
 
 .skill-graphs__container {
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
   margin-bottom: 10%;
 }
 
 .skills-graphs__graph-label {
   -ms-flex: 1 0 100%;
-  flex: 1 0 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 100%;
+          flex: 1 0 100%;
   text-align: center;
   margin-bottom: 1em;
 }
 
 .skills-graph {
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
   width: 25em;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
   border-bottom: solid 1px #FFFFFF;
   font-size: 0.9em;
   margin-bottom: 10em;
@@ -922,11 +1022,18 @@ label[for^="project-"]:hover {
   margin: 0 1em 0 0.8em;
   padding: 0;
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
   text-align: right;
 }
 
@@ -939,15 +1046,22 @@ label[for^="project-"]:hover {
   margin: 0;
   padding: 0;
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-align: end;
-  align-items: flex-end;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+          align-items: flex-end;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
   position: relative;
   height: 10em;
   -ms-flex: 2;
-  flex: 2;
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+          flex: 2;
 }
 
 .x-axis li {
@@ -1007,10 +1121,14 @@ label[for^="project-"]:hover {
 
 .title {
   position: absolute;
-  transform-origin: top left;
+  -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+          transform-origin: top left;
   bottom: -1.5em;
   left: 1.3em;
-  transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
+      -ms-transform: rotate(50deg);
+          transform: rotate(50deg);
 }
 
 .skills-graphs__tool-tip {
@@ -1026,6 +1144,7 @@ label[for^="project-"]:hover {
   border-radius: 0.2em;
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
   z-index: 15;
 }
@@ -1034,7 +1153,9 @@ label[for^="project-"]:hover {
   content: "";
   width: 1em;
   height: 1em;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
   background-color: #373B44;
   position: absolute;
   bottom: -0.4em;
@@ -1055,11 +1176,17 @@ footer {
   background-color: #373B44;
   min-height: 10vh;
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
   -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
   font-family: "Montserrat";
 }
 
@@ -1075,9 +1202,14 @@ footer > span {
 @media screen and (min-width: 43em) {
   .nav_list {
     -ms-flex-direction: row;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+            flex-direction: row;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
   }
   nav {
     text-align: left;
@@ -1113,6 +1245,7 @@ footer > span {
   .nav_list li:not(:last-of-type):before {
     content: "[";
     padding-right: 0.2em;
+    -webkit-transition: 250ms;
     transition: 250ms;
     font-weight: bold;
     opacity: 0.75;
@@ -1120,6 +1253,7 @@ footer > span {
   .nav_list li:not(:last-of-type):after {
     content: "]";
     padding-left: 0.2em;
+    -webkit-transition: 250ms;
     transition: 250ms;
     font-weight: bold;
     opacity: 0.75;
