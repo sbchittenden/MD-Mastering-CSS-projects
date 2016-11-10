@@ -188,7 +188,7 @@ input[id^="nav__search-modal"] {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(51, 68, 69, 0.5);
+  background-color: rgba(55, 59, 68, 0.75);
   z-index: 1000;
   transition: opacity 1s, visibility 1s;
 }
