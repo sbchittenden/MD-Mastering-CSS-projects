@@ -100,7 +100,7 @@ label[for="card-flip"]:hover + .card {
   height: 100%;
   padding: 1em 1.3em;
   background-color: #373B44;
-  background: url(../img/business_card/skulls.png) center / cover repeat;
+  background: url(../img/business_card/skulls.png) repeat;
 }
 
 .card-front > .fa-reply,
