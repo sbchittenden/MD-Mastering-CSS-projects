@@ -1052,7 +1052,7 @@ label[for^="project-"]:hover {
 --------------------------------------------- */
 
 footer {
-  background-color: #6C7385;
+  background-color: #373B44;
   min-height: 10vh;
   display: -ms-flexbox;
   display: flex;
@@ -1064,7 +1064,7 @@ footer {
 }
 
 footer > span {
-  color: #C3CAD9;
+  color: #636B7B;
 }
 
 
